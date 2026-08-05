@@ -1,7 +1,7 @@
 document.getElementById("year").textContent = String(new Date().getFullYear());
 
 const revealTargets = document.querySelectorAll(
-  ".expertise-item, .case, .portfolio-panel, .connect-inner, .trust-list"
+  ".expertise-item, .project-card, .portfolio-panel, .connect-inner, .trust-list"
 );
 
 if ("IntersectionObserver" in window) {
@@ -17,8 +17,9 @@ if ("IntersectionObserver" in window) {
     { threshold: 0.12, rootMargin: "0px 0px -36px 0px" }
   );
 
-  revealTargets.forEach((el) => {
+  revealTargets.forEach((el, i) => {
     el.classList.add("reveal");
+    el.style.transitionDelay = `${Math.min(i * 0.06, 0.3)}s`;
     observer.observe(el);
   });
 }
@@ -27,7 +28,7 @@ const style = document.createElement("style");
 style.textContent = `
   .reveal {
     opacity: 0;
-    transform: translateY(18px);
+    transform: translateY(22px);
     transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1), transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
   }
   .reveal.is-visible {
