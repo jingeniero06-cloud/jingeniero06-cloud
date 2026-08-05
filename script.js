@@ -1,10 +1,12 @@
 document.getElementById("year").textContent = String(new Date().getFullYear());
 
+const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
 const revealTargets = document.querySelectorAll(
-  ".expertise-item, .project-card, .portfolio-panel, .connect-inner, .trust-list"
+  ".expertise-item, .project-card, .portfolio-panel, .connect-inner, .trust-list, .section-head"
 );
 
-if ("IntersectionObserver" in window) {
+if (!prefersReduced && "IntersectionObserver" in window) {
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -19,28 +21,9 @@ if ("IntersectionObserver" in window) {
 
   revealTargets.forEach((el, i) => {
     el.classList.add("reveal");
-    el.style.transitionDelay = `${Math.min(i * 0.06, 0.3)}s`;
+    el.style.transitionDelay = `${Math.min(i * 0.05, 0.28)}s`;
     observer.observe(el);
   });
+} else {
+  revealTargets.forEach((el) => el.classList.add("is-visible"));
 }
-
-const style = document.createElement("style");
-style.textContent = `
-  .reveal {
-    opacity: 0;
-    transform: translateY(22px);
-    transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1), transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
-  }
-  .reveal.is-visible {
-    opacity: 1;
-    transform: none;
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .reveal {
-      opacity: 1;
-      transform: none;
-      transition: none;
-    }
-  }
-`;
-document.head.appendChild(style);
