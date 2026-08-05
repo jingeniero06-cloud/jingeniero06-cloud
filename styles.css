@@ -158,6 +158,41 @@ main {
   margin: 0 auto;
 }
 
+.hero-layout {
+  display: grid;
+  gap: 1.75rem;
+  align-items: center;
+}
+
+.hero-copy {
+  min-width: 0;
+}
+
+.hero-portrait {
+  margin: 0;
+  justify-self: start;
+  width: clamp(7.5rem, 22vw, 10.5rem);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid rgba(143, 191, 175, 0.45);
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.35),
+    0 0 0 6px rgba(111, 158, 143, 0.08);
+  opacity: 0;
+  animation: rise 0.85s var(--ease) 0.18s forwards;
+}
+
+.hero-portrait img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Face/shoulders crop — cafe foreground stays out of frame */
+  object-position: 50% 16%;
+  transform: scale(1.08);
+}
+
 .hero-kicker {
   margin: 0 0 1.1rem;
   font-size: 0.78rem;
@@ -716,6 +751,18 @@ main {
     display: flex;
   }
 
+  .hero-layout {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: clamp(1.5rem, 4vw, 3rem);
+    align-items: center;
+  }
+
+  .hero-portrait {
+    justify-self: end;
+    width: clamp(9.5rem, 14vw, 12.5rem);
+    order: 0;
+  }
+
   .hero-proof {
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1rem;
@@ -800,9 +847,14 @@ main {
   .hero-title,
   .hero-lede,
   .hero-actions,
-  .hero-proof {
+  .hero-proof,
+  .hero-portrait {
     opacity: 1;
     animation: none;
+    transform: none;
+  }
+
+  .hero-portrait img {
     transform: none;
   }
 

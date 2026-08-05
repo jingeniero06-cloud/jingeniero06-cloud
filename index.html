@@ -14,7 +14,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600;6..72,700&family=Public+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <base href="./" />
+  <link rel="stylesheet" href="styles.css?v=20260806" />
 </head>
 <body>
   <div class="grain" aria-hidden="true"></div>
@@ -32,16 +33,30 @@
 
   <main id="top">
     <section class="hero">
-      <p class="hero-kicker">Available for hire · SEO · WordPress · Static conversion</p>
-      <h1 class="hero-brand">John “Engr” Ingeniero</h1>
-      <p class="hero-title">I help agencies and operators grow organic traffic without breaking WordPress ops.</p>
-      <p class="hero-lede">
-        Senior SEO Specialist and WordPress Developer with 5+ years shipping technical SEO, multi-site care, and WordPress → Cloudflare static conversions that keep rankings, forms, and CallRail intact.
-      </p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="https://calendly.com/jingeniero-06/30min" target="_blank" rel="noopener noreferrer">Book a call</a>
-        <a class="btn btn-ghost" href="assets/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
-        <a class="btn btn-ghost" href="#projects">See proof</a>
+      <div class="hero-layout">
+        <div class="hero-copy">
+          <p class="hero-kicker">Available for hire · SEO · WordPress · Static conversion</p>
+          <h1 class="hero-brand">John “Engr” Ingeniero</h1>
+          <p class="hero-title">I help agencies and operators grow organic traffic without breaking WordPress ops.</p>
+          <p class="hero-lede">
+            Senior SEO Specialist and WordPress Developer with 5+ years shipping technical SEO, multi-site care, and WordPress → Cloudflare static conversions that keep rankings, forms, and CallRail intact.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://calendly.com/jingeniero-06/30min" target="_blank" rel="noopener noreferrer">Book a call</a>
+            <a class="btn btn-ghost" href="assets/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+            <a class="btn btn-ghost" href="#projects">See proof</a>
+          </div>
+        </div>
+        <figure class="hero-portrait">
+          <img
+            src="assets/images/john-ingeniero.png"
+            alt="Portrait of John Ingeniero, Senior SEO Specialist and WordPress Developer"
+            width="320"
+            height="320"
+            decoding="async"
+            fetchpriority="high"
+          />
+        </figure>
       </div>
       <dl class="hero-proof" aria-label="Proof points">
         <div>
@@ -388,6 +403,6 @@
     <p class="footer-note">© <span id="year"></span> · Open to full-time or contract</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=20260806"></script>
 </body>
 </html>
