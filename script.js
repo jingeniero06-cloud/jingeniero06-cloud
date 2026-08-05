@@ -1,6 +1,8 @@
 document.getElementById("year").textContent = String(new Date().getFullYear());
 
-const revealTargets = document.querySelectorAll(".expertise-item, .work-panel, .connect-inner");
+const revealTargets = document.querySelectorAll(
+  ".expertise-item, .case, .portfolio-panel, .connect-inner, .trust-list"
+);
 
 if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver(
@@ -12,7 +14,7 @@ if ("IntersectionObserver" in window) {
         }
       });
     },
-    { threshold: 0.18, rootMargin: "0px 0px -40px 0px" }
+    { threshold: 0.12, rootMargin: "0px 0px -36px 0px" }
   );
 
   revealTargets.forEach((el) => {
@@ -25,8 +27,8 @@ const style = document.createElement("style");
 style.textContent = `
   .reveal {
     opacity: 0;
-    transform: translateY(22px);
-    transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    transform: translateY(18px);
+    transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1), transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
   }
   .reveal.is-visible {
     opacity: 1;
