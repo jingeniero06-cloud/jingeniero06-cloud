@@ -1,8 +1,8 @@
 # John “Engr” Ingeniero
 
-**Senior SEO Specialist · WordPress Developer · System Administrator**
+**Senior SEO Specialist · WordPress Developer · Automation**
 
-Organic growth systems for WordPress businesses — plus hands-on **WordPress → static conversion** on Cloudflare.
+Organic growth systems for WordPress businesses — plus hands-on **WordPress → static conversion** on Cloudflare and fleet automation.
 
 ---
 
