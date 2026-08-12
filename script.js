@@ -51,7 +51,7 @@ if (!prefersReduced) {
   }
 }
 
-/* Mega AI fleet directory */
+/* Mega Inc. fleet directory */
 (function initMegaDirectory() {
   const root = document.querySelector("[data-mega-directory]");
   if (!root) return;
@@ -139,7 +139,7 @@ if (!prefersReduced) {
       applyFilters();
     })
     .catch(() => {
-      if (tbody) tbody.innerHTML = `<tr><td colspan="5">Could not load Mega AI fleet inventory.</td></tr>`;
+      if (tbody) tbody.innerHTML = `<tr><td colspan="5">Could not load Mega Inc. fleet inventory.</td></tr>`;
       if (countEl) countEl.textContent = "Fleet inventory unavailable";
     });
 
