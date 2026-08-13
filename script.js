@@ -37,7 +37,7 @@ window.addEventListener("keydown", (event) => {
   if (event.key === "Escape") closeNav();
 });
 
-const revealTargets = document.querySelectorAll(".reveal, .work-item, .system-item, .mega-stats, .mega-featured, .mega-directory");
+const revealTargets = document.querySelectorAll(".work-item, .system-item");
 
 if (!prefersReduced && "IntersectionObserver" in window) {
   const observer = new IntersectionObserver(
