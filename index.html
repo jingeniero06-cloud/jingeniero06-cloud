@@ -16,22 +16,29 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Syne:wght@500;600;700;800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <base href="./" />
-  <link rel="stylesheet" href="styles.css?v=mega2" />
+  <link rel="stylesheet" href="styles.css?v=hire1" />
 </head>
 <body>
   <div class="grain" aria-hidden="true"></div>
 
   <header class="site-header" data-header>
     <a class="logo" href="#top">John Ingeniero</a>
-    <nav class="nav" aria-label="Primary">
+    <nav class="nav" id="site-nav" data-nav aria-label="Primary">
       <a href="#mega-ai">Mega Inc.</a>
       <a href="#ln-campaigns">Campaign Ops</a>
       <a href="#work">Work</a>
       <a href="#systems">Systems</a>
       <a href="#about">About</a>
       <a href="#connect">Hire</a>
+      <a class="nav-resume" href="assets/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
     </nav>
-    <a class="btn btn-sm btn-primary" href="https://calendly.com/jingeniero-06/30min" target="_blank" rel="noopener noreferrer">Book a call</a>
+    <div class="header-actions">
+      <a class="header-resume" href="assets/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+      <a class="btn btn-sm btn-primary" href="https://calendly.com/jingeniero-06/30min" target="_blank" rel="noopener noreferrer">Book a call</a>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+    </div>
   </header>
 
   <main id="top">
@@ -49,14 +56,22 @@
         <div class="hero-shade"></div>
       </div>
       <div class="hero-content">
-        <p class="hero-kicker">Available for hire</p>
+        <p class="hero-kicker">Available for hire · Remote · Full-time or contract</p>
+        <p class="hero-role">Senior SEO Specialist · WordPress Development Manager</p>
         <h1 class="hero-brand">John “Engr” Ingeniero</h1>
         <p class="hero-title">SEO, WordPress, and automation that keeps fleets healthy at the edge.</p>
         <p class="hero-lede">
           I convert WordPress to Cloudflare static, audit multi-site portfolios, and build the scripts that turn manual repairs into repeatable systems.
         </p>
+        <ul class="hero-chips" aria-label="Core strengths">
+          <li>Technical SEO</li>
+          <li>Cloudflare static</li>
+          <li>10DLC / SMS</li>
+          <li>Fleet automation</li>
+        </ul>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="https://calendly.com/jingeniero-06/30min" target="_blank" rel="noopener noreferrer">Book a call</a>
+          <a class="btn btn-primary" href="https://calendly.com/jingeniero-06/30min" target="_blank" rel="noopener noreferrer">Book a 30-min call</a>
+          <a class="btn btn-ghost" href="assets/resume.pdf" target="_blank" rel="noopener noreferrer">Resume PDF</a>
           <a class="btn btn-ghost" href="#mega-ai">Mega Inc. case study</a>
         </div>
       </div>
@@ -509,6 +524,7 @@
         </ul>
         <div class="hero-actions connect-actions">
           <a class="btn btn-primary" href="https://calendly.com/jingeniero-06/30min" target="_blank" rel="noopener noreferrer">Schedule a call</a>
+          <a class="btn btn-ghost" href="assets/resume.pdf" target="_blank" rel="noopener noreferrer">Resume PDF</a>
           <a class="btn btn-ghost" href="mailto:jingeniero.06@gmail.com">jingeniero.06@gmail.com</a>
         </div>
       </div>
@@ -523,6 +539,6 @@
     <p class="footer-note">© <span id="year"></span> · Open to full-time or contract</p>
   </footer>
 
-  <script src="script.js?v=mega2"></script>
+  <script src="script.js?v=hire1"></script>
 </body>
 </html>

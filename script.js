@@ -2,18 +2,42 @@ document.getElementById("year").textContent = String(new Date().getFullYear());
 
 const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const header = document.querySelector("[data-header]");
+const navToggle = document.querySelector("[data-nav-toggle]");
+const nav = document.querySelector("[data-nav]");
 
 function syncHeader() {
   if (!header) return;
   header.classList.toggle("is-solid", window.scrollY > 48);
 }
 
+function closeNav() {
+  if (!header || !navToggle) return;
+  header.classList.remove("is-open");
+  navToggle.setAttribute("aria-expanded", "false");
+  navToggle.setAttribute("aria-label", "Open menu");
+  document.body.style.overflow = "";
+}
+
+function toggleNav() {
+  if (!header || !navToggle) return;
+  const open = !header.classList.contains("is-open");
+  header.classList.toggle("is-open", open);
+  navToggle.setAttribute("aria-expanded", String(open));
+  navToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  document.body.style.overflow = open ? "hidden" : "";
+}
+
 syncHeader();
 window.addEventListener("scroll", syncHeader, { passive: true });
+navToggle?.addEventListener("click", toggleNav);
+nav?.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", closeNav);
+});
+window.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") closeNav();
+});
 
-const revealTargets = document.querySelectorAll(
-  ".reveal, .section-head, .proof-row"
-);
+const revealTargets = document.querySelectorAll(".reveal, .work-item, .system-item, .mega-stats, .mega-featured, .mega-directory");
 
 if (!prefersReduced && "IntersectionObserver" in window) {
   const observer = new IntersectionObserver(
@@ -25,12 +49,12 @@ if (!prefersReduced && "IntersectionObserver" in window) {
         }
       });
     },
-    { threshold: 0.14, rootMargin: "0px 0px -40px 0px" }
+    { threshold: 0.08, rootMargin: "0px 0px -24px 0px" }
   );
 
   revealTargets.forEach((el, i) => {
     el.classList.add("reveal");
-    el.style.transitionDelay = `${Math.min(i * 0.04, 0.24)}s`;
+    el.style.transitionDelay = `${Math.min(i * 0.03, 0.18)}s`;
     observer.observe(el);
   });
 } else {
