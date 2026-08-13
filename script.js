@@ -27,6 +27,10 @@ function toggleNav() {
   document.body.style.overflow = open ? "hidden" : "";
 }
 
+if (document.body.classList.contains("inner-page") && header) {
+  header.classList.add("is-solid");
+}
+
 syncHeader();
 window.addEventListener("scroll", syncHeader, { passive: true });
 navToggle?.addEventListener("click", toggleNav);
@@ -34,10 +38,63 @@ nav?.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", closeNav);
 });
 window.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") closeNav();
+  if (event.key === "Escape") {
+    closeNav();
+    closeLightbox();
+    closeSubnavs();
+  }
 });
 
-const revealTargets = document.querySelectorAll(".work-item, .system-item, .mega-stats, .mega-featured, .mega-directory, .ops-mix, .systems-visual, .about-portrait, .about-copy, .connect-panel");
+document.querySelectorAll("[data-subnav]").forEach((group) => {
+  const btn = group.querySelector("[data-subnav-btn]");
+  btn?.addEventListener("click", (event) => {
+    event.stopPropagation();
+    const open = !group.classList.contains("is-open");
+    closeSubnavs();
+    group.classList.toggle("is-open", open);
+    btn.setAttribute("aria-expanded", String(open));
+  });
+});
+
+function closeSubnavs() {
+  document.querySelectorAll("[data-subnav]").forEach((group) => {
+    group.classList.remove("is-open");
+    group.querySelector("[data-subnav-btn]")?.setAttribute("aria-expanded", "false");
+  });
+}
+
+document.addEventListener("click", (event) => {
+  if (!event.target.closest("[data-subnav]")) closeSubnavs();
+});
+
+const lightbox = document.createElement("div");
+lightbox.className = "lightbox";
+lightbox.innerHTML = `<button class="lightbox-close" type="button" data-lightbox-close>Close</button><img alt="" />`;
+document.body.appendChild(lightbox);
+const lightboxImg = lightbox.querySelector("img");
+
+function openLightbox(img) {
+  if (!lightboxImg) return;
+  lightboxImg.src = img.currentSrc || img.src;
+  lightboxImg.alt = img.alt || "";
+  lightbox.classList.add("is-open");
+  document.body.style.overflow = "hidden";
+}
+
+function closeLightbox() {
+  lightbox.classList.remove("is-open");
+  if (!header?.classList.contains("is-open")) document.body.style.overflow = "";
+}
+
+lightbox.addEventListener("click", (event) => {
+  if (event.target === lightbox || event.target.closest("[data-lightbox-close]")) closeLightbox();
+});
+
+document.querySelectorAll(".work-media img, .ops-mix-card img, .work-thumbs img").forEach((img) => {
+  img.addEventListener("click", () => openLightbox(img));
+});
+
+const revealTargets = document.querySelectorAll(".work-item, .system-item, .mega-stats, .mega-featured, .mega-directory, .ops-mix, .systems-visual, .about-portrait, .about-copy, .connect-panel, .case-card");
 
 if (!prefersReduced && "IntersectionObserver" in window) {
   const observer = new IntersectionObserver(

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Syne:wght@500;600;700;800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <base href="./" />
-  <link rel="stylesheet" href="styles.css?v=hire3" />
+  <link rel="stylesheet" href="styles.css?v=site4" />
 </head>
 <body>
   <div class="grain" aria-hidden="true"></div>
@@ -24,10 +24,15 @@
   <header class="site-header" data-header>
     <a class="logo" href="#top">John Ingeniero</a>
     <nav class="nav" id="site-nav" data-nav aria-label="Primary">
-      <a href="#mega-ai">Mega Inc.</a>
-      <a href="#queue">Queue</a>
-      <a href="#ln-campaigns">Campaign Ops</a>
-      <a href="#work">Work</a>
+      <div class="nav-group" data-subnav>
+        <button type="button" class="nav-trigger" data-subnav-btn aria-expanded="false">Work</button>
+        <div class="nav-dropdown">
+          <a href="mega-inc.html">Mega Inc. fleet<small>598 production domains</small></a>
+          <a href="queue.html">Technical queue<small>553 completed tickets</small></a>
+          <a href="campaign-ops.html">Campaign ops<small>10DLC, SMS, handoff</small></a>
+          <a href="work.html">Selected work<small>Audits, feeds, on-page SEO</small></a>
+        </div>
+      </div>
       <a href="#systems">Systems</a>
       <a href="#about">About</a>
       <a href="#connect">Hire</a>
@@ -74,7 +79,7 @@
         <div class="hero-actions">
           <a class="btn btn-primary" href="https://calendly.com/jingeniero-06/30min" target="_blank" rel="noopener noreferrer">Book a 30-min call</a>
           <a class="btn btn-ghost" href="assets/resume.pdf" target="_blank" rel="noopener noreferrer">Resume PDF</a>
-          <a class="btn btn-ghost" href="#mega-ai">Mega Inc. case study</a>
+          <a class="btn btn-ghost" href="mega-inc.html">Mega Inc. case study</a>
         </div>
       </div>
       <a class="hero-scroll" href="#proof" aria-label="Scroll to proof">
@@ -107,305 +112,49 @@
       </ul>
     </section>
 
-    <section class="section mega-ai" id="mega-ai">
+    <section class="section" id="work">
       <div class="section-head section-head-wide">
-        <p class="eyebrow">Featured case study · Mega Inc.</p>
-        <h2>Fleet website operations at scale</h2>
-        <p>
-          At Mega Inc. I help operate a large local-services website fleet — WordPress care, static conversion to Cloudflare/Appex edge, CallRail/forms QA, SEO hygiene, and batch audits across Batches 1–7.
-        </p>
+        <p class="eyebrow">Work</p>
+        <h2>Four case files. Not a screenshot dump.</h2>
+        <p>Each engagement lives on its own page. Hover a card, then open the case — click any screenshot there to zoom.</p>
       </div>
-
-      <ul class="mega-stats reveal" aria-label="Mega Inc. fleet metrics">
-        <li><strong>598</strong><span>Production domains</span></li>
-        <li><strong>346</strong><span>Appex Static live</span></li>
-        <li><strong>250</strong><span>Still on WordPress</span></li>
-        <li><strong>28</strong><span>Customer brands</span></li>
-        <li><strong>7</strong><span>Conversion batches</span></li>
-      </ul>
-
-      <div class="mega-featured reveal">
-        <div class="mega-featured-copy">
-          <p class="eyebrow">Pilot conversions</p>
-          <h3>Featured sites from the static conversion program</h3>
-          <p>Representative domains from the Mega Inc. pilot and production cutovers — scraped, deployed to Cloudflare edge, audited for SEO/forms/CallRail, then pushed to prod.</p>
-        </div>
-        <ul class="mega-featured-list">
-          <li><a href="https://abilenedrivewayrepair.com/" target="_blank" rel="noopener noreferrer">abilenedrivewayrepair.com</a><span>Legacy Supportworks · Static</span></li>
-          <li><a href="https://southlaketreeservicecompany.com/" target="_blank" rel="noopener noreferrer">southlaketreeservicecompany.com</a><span>J. Chavez · Static</span></li>
-          <li><a href="https://alamoheightsfoundationrepair.com/" target="_blank" rel="noopener noreferrer">alamoheightsfoundationrepair.com</a><span>GL Hunt · Static</span></li>
-          <li><a href="https://plainviewconcreterepairandleveling.com/" target="_blank" rel="noopener noreferrer">plainviewconcreterepairandleveling.com</a><span>Legacy Supportworks · Static</span></li>
-          <li><a href="https://springfieldtnfoundationrepair.com/" target="_blank" rel="noopener noreferrer">springfieldtnfoundationrepair.com</a><span>TFS · Static</span></li>
-          <li><a href="https://zebulonfoundationrepair.com/" target="_blank" rel="noopener noreferrer">zebulonfoundationrepair.com</a><span>Regional · Static</span></li>
-          <li><a href="https://lutzfoundationrepair.com/" target="_blank" rel="noopener noreferrer">lutzfoundationrepair.com</a><span>LRE · Static</span></li>
-          <li><a href="https://saginawtxtreeservice.com/" target="_blank" rel="noopener noreferrer">saginawtxtreeservice.com</a><span>J. Chavez · Static</span></li>
-          <li><a href="https://berkeleyconcreterepairandleveling.com/" target="_blank" rel="noopener noreferrer">berkeleyconcreterepairandleveling.com</a><span>Static</span></li>
-          <li><a href="https://springpaintcontractors.com/" target="_blank" rel="noopener noreferrer">springpaintcontractors.com</a><span>Static</span></li>
-          <li><a href="https://colleyvilletreeservicecompany.com/" target="_blank" rel="noopener noreferrer">colleyvilletreeservicecompany.com</a><span>J. Chavez · Static</span></li>
-          <li><a href="https://newbraunfelsfenceexperts.com/" target="_blank" rel="noopener noreferrer">newbraunfelsfenceexperts.com</a><span>Static</span></li>
-          <li><a href="https://aberdeenfoundationrepair.com/" target="_blank" rel="noopener noreferrer">aberdeenfoundationrepair.com</a><span>Regional · Static</span></li>
-          <li><a href="https://benbrookfoundationrepair.com/" target="_blank" rel="noopener noreferrer">benbrookfoundationrepair.com</a><span>GL Hunt · Static</span></li>
-        </ul>
-      </div>
-
-      <div class="mega-directory reveal" data-mega-directory>
-        <div class="mega-directory-head">
-          <div>
-            <p class="eyebrow">Full fleet directory</p>
-            <h3>All Mega Inc. websites I’ve worked across</h3>
-            <p class="mega-directory-count" data-mega-count>Loading 598 domains…</p>
+      <div class="case-grid">
+        <a class="case-card reveal" href="mega-inc.html">
+          <figure class="shot"><img src="assets/images/workstation-ops.jpg?v=2" alt="Fleet operations workstation" width="1600" height="900" loading="lazy" decoding="async" /></figure>
+          <div class="case-copy">
+            <p class="eyebrow">Fleet ops</p>
+            <h3>Mega Inc.</h3>
+            <p>598 production domains, 346 Appex Static conversions, and the searchable fleet directory.</p>
+            <span class="case-go">Open case study →</span>
           </div>
-          <div class="mega-filters">
-            <label class="mega-search">
-              <span class="sr-only">Search sites</span>
-              <input type="search" data-mega-search placeholder="Search domain, brand, or customer…" autocomplete="off" />
-            </label>
-            <label>
-              <span class="sr-only">Filter by platform</span>
-              <select data-mega-platform>
-                <option value="all">All platforms</option>
-                <option value="static">Appex Static</option>
-                <option value="wordpress">WordPress</option>
-              </select>
-            </label>
-            <label>
-              <span class="sr-only">Filter by batch</span>
-              <select data-mega-batch>
-                <option value="all">All batches</option>
-                <option value="1">Batch 1</option>
-                <option value="2">Batch 2</option>
-                <option value="3">Batch 3</option>
-                <option value="4">Batch 4</option>
-                <option value="5">Batch 5</option>
-                <option value="6">Batch 6</option>
-                <option value="7">Batch 7</option>
-              </select>
-            </label>
+        </a>
+        <a class="case-card reveal" href="queue.html">
+          <figure class="shot"><img src="assets/images/queue/my-tasks-553.png" alt="553 completed technical queue tasks" width="1600" height="900" loading="lazy" decoding="async" /></figure>
+          <div class="case-copy">
+            <p class="eyebrow">Technical queue</p>
+            <h3>553 closed tickets</h3>
+            <p>RevCentric crawl-budget repair, OMORPHO Hydrogen canonicals, SafeLine 90-day plan, 10DLC boards.</p>
+            <span class="case-go">Open queue →</span>
           </div>
-        </div>
-        <div class="mega-table-wrap">
-          <table class="mega-table">
-            <thead>
-              <tr>
-                <th>Site</th>
-                <th>Domain</th>
-                <th>Customer</th>
-                <th>Batch</th>
-                <th>Platform</th>
-              </tr>
-            </thead>
-            <tbody data-mega-tbody>
-              <tr><td colspan="5">Loading fleet inventory…</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-
-    <section class="section work queue-ops" id="queue">
-      <div class="section-head section-head-wide">
-        <p class="eyebrow">Live technical queue · Mega Agents</p>
-        <h2>High-volume SEO and website execution, ticket by ticket</h2>
-        <p>I close technical SEO, CMS, and compliance work inside a production queue — WordPress, Shopify, Webflow, Wix, HubSpot, Framer, Sanity, and Shopify Hydrogen — with written findings, before/after proof, and a completed status the team can ship from.</p>
-      </div>
-
-      <ul class="mega-stats reveal" aria-label="Technical queue metrics">
-        <li><strong>553</strong><span>Completed queue tasks</span></li>
-        <li><strong>104</strong><span>WordPress parent cases</span></li>
-        <li><strong>7</strong><span>CMS platforms in mix</span></li>
-        <li><strong>167</strong><span>Keywords mapped · SafeLine plan</span></li>
-        <li><strong>500</strong><span>Broken URLs cleared · RevCentric</span></li>
-      </ul>
-
-      <div class="work-stack">
-        <article class="work-item featured reveal">
-          <div class="work-meta"><span class="work-label">Featured execution log</span><span class="work-index">553</span></div>
-          <figure class="work-media work-media-ui"><img src="assets/images/queue/my-tasks-553.png" alt="My Tasks queue showing 553 completed technical SEO, CMS, and website tickets" width="1600" height="900" loading="lazy" decoding="async" /></figure>
-          <div class="work-body">
-            <h3>Production queue across SEO, CMS, and publishing</h3>
-            <p>Completed work spans FAQPage JSON-LD, XML sitemap configuration, broken-link repair, Webflow/WordPress publish pipelines, GitHub redirect deploys, and brand-context admin updates — with every ticket marked completed in the same operating system.</p>
-            <ul class="metric-list">
-              <li><span>553 completed</span> tasks in the technical queue</li>
-              <li>Clients include LevelWorks, Warden AI, AMECO Solar, Afterburner, and All Florida Permits</li>
-              <li>Ticket types: Technical SEO, redirects, sitemaps, article publish, CMS fixes</li>
-            </ul>
-            <ul class="skill-row" aria-label="Queue skills"><li>Technical SEO</li><li>WordPress</li><li>Webflow</li><li>JSON-LD</li><li>GitHub redirects</li></ul>
+        </a>
+        <a class="case-card reveal" href="campaign-ops.html">
+          <figure class="shot"><img src="assets/images/campaign-operations-generated.png" alt="10DLC campaign operations" width="1536" height="864" loading="lazy" decoding="async" /></figure>
+          <div class="case-copy">
+            <p class="eyebrow">Campaign ops</p>
+            <h3>10DLC, SMS, handoff</h3>
+            <p>Consent rollout, campaign recovery, malware cleanup, and the static conversion playbook.</p>
+            <span class="case-go">Open campaign ops →</span>
           </div>
-        </article>
-
-        <div class="work-grid">
-          <article class="work-item reveal">
-            <div class="work-meta"><span class="work-label">Technical SEO</span><span class="work-index">RevCentric</span></div>
-            <figure class="work-media work-media-ui"><img src="assets/images/queue/revcentric-broken-links.png" alt="Completed ticket: RevCentric fix 500 broken links and crawl budget collapse" width="1400" height="900" loading="lazy" decoding="async" /></figure>
-            <div class="work-body">
-              <h3>Fix 500 broken links · crawl budget</h3>
-              <p>Audited reported broken URLs across 30+ pages and removed invalid, duplicate, and placeholder paths that were wasting crawl budget and hurting site health.</p>
-              <ul class="metric-list">
-                <li>Cleared junk routes such as <span>/homepage/</span>, <span>/template/</span>, and <span>/delete-pages/*</span></li>
-                <li>Wrote a customer-facing close note covering UX and SEO impact</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="work-item reveal">
-            <div class="work-meta"><span class="work-label">Headless SEO</span><span class="work-index">OMORPHO</span></div>
-            <figure class="work-media work-media-ui"><img src="assets/images/queue/omorpho-canonical.png" alt="Completed ticket: OMORPHO WWW redirect and canonical enforcement on Shopify Hydrogen" width="1400" height="900" loading="lazy" decoding="async" /></figure>
-            <div class="work-body">
-              <h3>Canonical + WWW on Hydrogen / Sanity</h3>
-              <p>Diagnosed a missing homepage canonical on a Sanity CMS + Shopify Hydrogen/Oxygen stack, then specified sitewide canonical tags and permanent redirects to the preferred host.</p>
-              <ul class="metric-list">
-                <li>Canonical implemented in <span>root/layout/Seo.tsx</span></li>
-                <li>Redirect rules to collapse www vs non-www duplicates</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="work-item reveal">
-            <div class="work-meta"><span class="work-label">Sitemap QA</span><span class="work-index">SPX</span></div>
-            <figure class="work-media work-media-ui"><img src="assets/images/queue/spxgodfather-sitemap.png" alt="Completed ticket: Rank Math sitemap review for spxgodfather.com" width="1400" height="900" loading="lazy" decoding="async" /></figure>
-            <div class="work-body">
-              <h3>Rank Math sitemap review</h3>
-              <p>Verified sitemap index accessibility, root-domain URLs, and Rank Math structure for a MemberPress site — then documented the seven included sitemap files.</p>
-              <ul class="metric-list">
-                <li>Confirmed <span>sitemap_index.xml</span> returns publicly</li>
-                <li>Posts, pages, MemberPress, and gallery sitemaps checked</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="work-item reveal">
-            <div class="work-meta"><span class="work-label">CMS / IA</span><span class="work-index">LevelWorks</span></div>
-            <figure class="work-media work-media-ui"><img src="assets/images/queue/levelworks-blog-nav.png" alt="Completed ticket: LevelWorks add Blog button to header navigation on Wix" width="1400" height="900" loading="lazy" decoding="async" /></figure>
-            <div class="work-body">
-              <h3>Wix header Blog nav</h3>
-              <p>Added a Blog control to the right of Services, linking to <span>/blog</span>, with before/after screenshots and a walkthrough recording attached to the ticket.</p>
-              <ul class="metric-list">
-                <li>Wix CMS implementation with visual proof</li>
-                <li>Internal-link IA fix, not just a copy change</li>
-              </ul>
-            </div>
-          </article>
-        </div>
-
-        <article class="work-item featured reveal">
-          <div class="work-meta"><span class="work-label">SEO strategy</span><span class="work-index">SafeLine</span></div>
-          <figure class="work-media work-media-ui"><img src="assets/images/queue/safeline-90-day-plan.png" alt="SafeLine Subsurface 90-day content plan in SEO plan review" width="1400" height="900" loading="lazy" decoding="async" /></figure>
-          <div class="work-body">
-            <h3>90-day content architecture &amp; local SEO</h3>
-            <p>Built a launch-ready growth plan for private utility locating, GPR, and concrete scanning across Virginia, D.C., Maryland, and North Carolina — keyword mapping, internal linking, and structured data before the site goes live.</p>
-            <ul class="metric-list">
-              <li><span>167-keyword</span> portfolio mapped to service and city pages</li>
-              <li>Pre-launch backlink / link-gap research for Month 3 outreach</li>
-              <li>Blog targets include GPR, SUE, and locator queries</li>
-            </ul>
-            <div class="work-thumbs" aria-label="SafeLine supporting screenshots">
-              <img src="assets/images/queue/safeline-keywords-outreach.png" alt="SafeLine blog target keywords and backlink outreach task" width="900" height="560" loading="lazy" decoding="async" />
-              <img src="assets/images/queue/seo-plan-reviews.png" alt="SEO Plan Reviews queue with SafeLine and other 90-day plans pending review" width="900" height="560" loading="lazy" decoding="async" />
-            </div>
-            <ul class="skill-row" aria-label="Strategy skills"><li>Content architecture</li><li>Local SEO</li><li>Keyword mapping</li><li>Link-gap research</li></ul>
+        </a>
+        <a class="case-card reveal" href="work.html">
+          <figure class="shot"><img src="assets/images/card-static-lighthouse.webp" alt="Static conversion Lighthouse before and after" width="1400" height="700" loading="lazy" decoding="async" /></figure>
+          <div class="case-copy">
+            <p class="eyebrow">Selected work</p>
+            <h3>Audits, feeds, on-page</h3>
+            <p>Static conversion Lighthouse 80→96, 13-site QA, Swim2000 GMC, PrintItNY, HuFriedy, insurance SEO.</p>
+            <span class="case-go">Open selected work →</span>
           </div>
-        </article>
-
-        <div class="work-grid">
-          <article class="work-item reveal">
-            <div class="work-meta"><span class="work-label">Ops system</span><span class="work-index">10DLC</span></div>
-            <figure class="work-media work-media-ui"><img src="assets/images/queue/10dlc-registration.png" alt="10DLC Registration kanban: intake through brand and campaign registered stages" width="1600" height="900" loading="lazy" decoding="async" /></figure>
-            <div class="work-body">
-              <h3>10DLC registration pipeline</h3>
-              <p>Operate the registration board from intake through brand submitted, campaign setup, MNO review, issue recovery, and registered — with expedite handling and stage-age tracking.</p>
-              <ul class="metric-list">
-                <li>Columns for brand issue, campaign issue, and registered</li>
-                <li>Flow metrics on backlog, age, and duration percentiles</li>
-              </ul>
-            </div>
-          </article>
-          <article class="work-item reveal">
-            <div class="work-meta"><span class="work-label">Ops system</span><span class="work-index">Onboarding</span></div>
-            <figure class="work-media work-media-ui"><img src="assets/images/queue/conversion-onboarding.png" alt="Conversion Onboarding kanban with engineering, testing, 10DLC approval, and customer approval stages" width="1600" height="900" loading="lazy" decoding="async" /></figure>
-            <div class="work-body">
-              <h3>Conversion onboarding board</h3>
-              <p>Track clients through intake, engineering, agent setup, testing, 10DLC approval, and customer approval — including blocked engineering work, expedite tags, and churn-risk flags.</p>
-              <ul class="metric-list">
-                <li>Stage-level P50/P90 duration and quality rates</li>
-                <li>Handoff notes and downstream task links on each card</li>
-              </ul>
-            </div>
-          </article>
-        </div>
-      </div>
-
-      <div class="ops-mix reveal">
-        <div>
-          <p class="eyebrow">Work mix · focus buckets</p>
-          <h3>Where the queue actually spends time</h3>
-          <p>Primary task types I execute and unblock — investigation, technical fixes, publishing, and live verification.</p>
-        </div>
-        <div class="ops-mix-grid">
-          <figure class="ops-mix-card">
-            <img src="assets/images/queue/work-mix-seo.png" alt="Work mix table by SEO focus bucket: investigation, content, technical fixes, local SEO, publishing" width="900" height="640" loading="lazy" decoding="async" />
-          </figure>
-          <figure class="ops-mix-card">
-            <img src="assets/images/queue/work-mix-cms.png" alt="Work mix table by CMS: WordPress 104 cases, Shopify 23, Webflow 21, Wix, HubSpot, Framer, Sanity" width="900" height="640" loading="lazy" decoding="async" />
-          </figure>
-        </div>
-        <ul class="skill-row ops-mix-chips" aria-label="CMS platforms">
-          <li>WordPress</li>
-          <li>Shopify</li>
-          <li>Webflow</li>
-          <li>Wix</li>
-          <li>HubSpot</li>
-          <li>Framer</li>
-          <li>Sanity</li>
-          <li>Hydrogen / Oxygen</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section work campaign-ops" id="ln-campaigns">
-      <div class="section-head section-head-wide">
-        <p class="eyebrow">Campaign operations · L&amp;N Associates</p>
-        <h2>Multi-client 10DLC compliance and campaign recovery</h2>
-        <p>I supported local-service and professional brands through SMS registration, website consent implementation, carrier rejection remediation, and campaign appeals—keeping website opt-in, policy language, message samples, and the registered use case aligned.</p>
-      </div>
-      <div class="work-stack">
-        <article class="work-item featured reveal">
-          <div class="work-meta"><span class="work-label">Featured operations case study</span><span class="work-index">L&amp;N</span></div>
-          <figure class="work-media"><img src="assets/images/campaign-operations-generated.png" alt="Generated visualization of an anonymized SMS compliance operations dashboard" width="1536" height="864" loading="lazy" decoding="async" /></figure>
-          <div class="work-body">
-            <h3>10DLC Campaign Issue Resolution</h3>
-            <p>Diagnosed registration failures, corrected inconsistent campaign descriptions and calls to action, rewrote compliant customer-care message flows, and prepared appeal language for carrier review. Client identities and registration data are selectively anonymized for confidentiality.</p>
-            <ul class="metric-list">
-              <li><span>End-to-end alignment:</span> website CTA → optional checkbox consent → customer-care SMS</li>
-              <li>Campaign descriptions, samples, HELP/STOP handling, and attributes reviewed together</li>
-              <li>Privacy Policy and Terms links verified at the point of opt-in</li>
-              <li>Rejection remediation included 602 inaccurate-registration mismatch analysis</li>
-            </ul>
-            <ul class="skill-row" aria-label="Campaign operations skills"><li>10DLC</li><li>Campaign remediation</li><li>SMS consent UX</li><li>Compliance QA</li><li>Appeal writing</li></ul>
-          </div>
-        </article>
-        <div class="work-grid">
-          <article class="work-item reveal">
-            <div class="work-meta"><span class="work-label">Implementation</span><span class="work-index">01</span></div>
-            <figure class="work-media"><img src="assets/canvas/sms-optin-policy-rollout.png" alt="Professional canvas of SMS opt-in and policy rollout: optional consent checkbox, HELP/STOP disclosures, and linked privacy and terms checks" width="1536" height="864" loading="lazy" decoding="async" /></figure>
-            <div class="work-body"><h3>SMS Opt-in &amp; Policy Rollout</h3><p>Implemented optional SMS consent across contact and booking flows, with linked policy pages and clear frequency, HELP, and STOP disclosures.</p><ul class="metric-list"><li>Unchecked, non-required consent controls</li><li>Form-builder HTML and responsive layout fixes</li><li>Privacy and terms language matched to the campaign</li></ul></div>
-          </article>
-          <article class="work-item reveal">
-            <div class="work-meta"><span class="work-label">Security operations</span><span class="work-index">02</span></div>
-            <figure class="work-media"><img src="assets/images/security-cleanup-generated.png" alt="Generated visualization of a malware redirect cleanup and verification workflow" width="1536" height="864" loading="lazy" decoding="async" /></figure>
-            <div class="work-body"><h3>WordPress Malware &amp; Redirect Cleanup</h3><p>Investigated recurring malicious redirects across WordPress files, database content, redirect tables, plugins, themes, uploads, and server rules—then documented cleanup and reinfection prevention.</p><ul class="metric-list"><li>Database, file-system, and .htaccess review</li><li>Credential, salt, cache, and hardening workflow</li></ul></div>
-          </article>
-          <article class="work-item reveal">
-            <div class="work-meta"><span class="work-label">Performance</span><span class="work-index">03</span></div>
-            <figure class="work-media"><img src="assets/images/swim2000-homepage.png" alt="Real public screenshot of the Swim2000 ecommerce homepage" width="1265" height="712" loading="lazy" decoding="async" /></figure>
-            <div class="work-body"><h3>Shopify Core Web Vitals Repair</h3><p>Identified a homepage hero slideshow as the primary LCP element, improved preload and fetch priority, and verified the deployed result through lab and field-data review.</p><ul class="metric-list"><li><span>0.98s local LCP</span> after hero-loading improvements</li><li><span>0.00 CLS</span> in local validation</li><li>CrUX monitoring separated from immediate lab verification</li></ul></div>
-          </article>
-          <article class="work-item reveal">
-            <div class="work-meta"><span class="work-label">Knowledge transfer</span><span class="work-index">04</span></div>
-            <figure class="work-media"><img src="assets/canvas/static-conversion-handoff.png" alt="Professional canvas of the static conversion handoff system: backup-operator playbook stages from setup through cutover, rollback, and troubleshooting" width="1536" height="864" loading="lazy" decoding="async" /></figure>
-            <div class="work-body"><h3>Static Conversion Handoff System</h3><p>Designed a backup-operator playbook covering setup, export, local preview, SEO and functional QA, forms, CallRail, deployment, cutover, rollback, and troubleshooting.</p><ul class="metric-list"><li>Portable Windows-oriented operating workflow</li><li>Repeatable QA and escalation checkpoints</li></ul></div>
-          </article>
-        </div>
+        </a>
       </div>
     </section>
 
@@ -415,17 +164,9 @@
         <h2>Where I create leverage</h2>
         <p>From crawl health to edge delivery — including the automation layer that makes multi-site work scalable.</p>
       </div>
-
       <div class="systems-layout">
         <figure class="systems-visual reveal">
-          <img
-            src="assets/images/workstation-ops.jpg?v=2"
-            alt="Workstation with dual monitors showing website audit dashboards"
-            width="1600"
-            height="900"
-            loading="lazy"
-            decoding="async"
-          />
+          <img src="assets/images/workstation-ops.jpg?v=2" alt="Workstation with dual monitors showing website audit dashboards" width="1600" height="900" loading="lazy" decoding="async" />
         </figure>
         <div class="systems-list">
           <article class="system-item reveal">
@@ -447,195 +188,6 @@
       </div>
     </section>
 
-    <section class="section work" id="work">
-      <div class="section-head section-head-wide">
-        <p class="eyebrow">Selected work</p>
-        <h2>More receipts from real engagements</h2>
-        <p>Screenshots, metrics, and PDFs — so hiring managers can evaluate delivery quality quickly.</p>
-      </div>
-
-      <div class="work-stack">
-        <article class="work-item featured reveal" id="static-conversion">
-          <div class="work-meta">
-            <span class="work-label">Featured</span>
-            <span class="work-index">01</span>
-          </div>
-          <figure class="work-media">
-            <img
-              src="assets/images/card-static-lighthouse.webp"
-              alt="Lighthouse before/after: Performance 88→96, LCP 4.4s→2.6s, TBT 220ms→30ms"
-              width="1400"
-              height="700"
-              loading="eager"
-              decoding="async"
-            />
-          </figure>
-          <div class="work-body">
-            <h3>WordPress → Static Conversion</h3>
-            <p>
-              Converted live WordPress sites to Cloudflare-served static mirrors while preserving SEO signals, schema, HTTPS, and CallRail form tracking — then documented live vs static performance in a formal case study.
-            </p>
-            <ul class="metric-list">
-              <li><span>Lighthouse ~80 → ~96</span> on converted landing pages</li>
-              <li><span>LCP ~4.4s → ~2.6s</span> · TBT ~220ms → ~30ms</li>
-              <li>Forms validated via Workers; CallRail submissions confirmed</li>
-            </ul>
-            <div class="work-thumbs" aria-label="Additional case study screenshots">
-              <img src="assets/images/card-static-network.webp" alt="Network panel before/after: fewer requests and faster load" width="700" height="310" loading="lazy" decoding="async" />
-              <img src="assets/images/card-static-seo-meta.webp" alt="SEO meta comparison for live and static pilot domains" width="700" height="345" loading="lazy" decoding="async" />
-            </div>
-            <ul class="skill-row" aria-label="Skills">
-              <li>Static conversion</li>
-              <li>Cloudflare Workers</li>
-              <li>R2 / KV</li>
-              <li>Core Web Vitals</li>
-              <li>CallRail</li>
-            </ul>
-            <div class="work-links">
-              <a href="assets/static-conversion-case-study.pdf" target="_blank" rel="noopener noreferrer">Case study PDF</a>
-              <a href="assets/static-landing-case-study.pdf" target="_blank" rel="noopener noreferrer">Landing-page audit</a>
-            </div>
-          </div>
-        </article>
-
-        <div class="work-grid">
-          <article class="work-item reveal">
-            <div class="work-meta">
-              <span class="work-label">QA program</span>
-              <span class="work-index">02</span>
-            </div>
-            <figure class="work-media">
-              <img
-                src="assets/images/card-portfolio-audit.webp"
-                alt="Full Static Site Audit Report summary for 13 sites"
-                width="1348"
-                height="953"
-                loading="lazy"
-                decoding="async"
-              />
-            </figure>
-            <div class="work-body">
-              <h3>13-Site Static Portfolio Audit</h3>
-              <p>Full static-site QA across a local-services portfolio — crawl health, robots/sitemaps, canonicals, KV cache, wp-admin blocks, forms, and on-page SEO.</p>
-              <ul class="metric-list">
-                <li>13 sites against a shared QA checklist</li>
-                <li>Pass/fail reporting with false-positive adjustments</li>
-              </ul>
-              <div class="work-links">
-                <a href="assets/portfolio-audit-13sites.pdf" target="_blank" rel="noopener noreferrer">Audit report</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="work-item reveal">
-            <div class="work-meta">
-              <span class="work-label">Ecommerce SEO</span>
-              <span class="work-index">03</span>
-            </div>
-            <figure class="work-media">
-              <img
-                src="assets/images/card-swim2000-gmc.webp"
-                alt="Google Merchant Center attribute rules for Swim2000 product feed"
-                width="1400"
-                height="1588"
-                loading="lazy"
-                decoding="async"
-              />
-            </figure>
-            <div class="work-body">
-              <h3>Swim2000 GMC Feed Audit</h3>
-              <p>Google Merchant Center SEO audit for a large swimwear catalog — feed quality, missing attributes, category mapping, and a prioritized action plan.</p>
-              <ul class="metric-list">
-                <li>128,330 feed rows reviewed</li>
-                <li>68k+ missing Google categories flagged</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="work-item reveal">
-            <div class="work-meta">
-              <span class="work-label">On-page SEO</span>
-              <span class="work-index">04</span>
-            </div>
-            <figure class="work-media">
-              <img
-                src="assets/images/card-printitny.webp"
-                alt="PrintItNY blog page with SEO navigation and content highlights"
-                width="1200"
-                height="891"
-                loading="lazy"
-                decoding="async"
-              />
-            </figure>
-            <div class="work-body">
-              <h3>PrintItNY Titles &amp; Metas</h3>
-              <p>SEO title and meta description sets for a large commercial printing catalog — standardized length, intent, and brand phrasing.</p>
-              <ul class="metric-list">
-                <li>~170 page titles &amp; metas authored</li>
-                <li>Deduplicated set for clean implementation</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="work-item reveal">
-            <div class="work-meta">
-              <span class="work-label">Keyword research</span>
-              <span class="work-index">05</span>
-            </div>
-            <figure class="work-media">
-              <img
-                src="assets/images/card-onpage-seo.webp"
-                alt="On-page SEO guide covering titles, metas, headings, and content structure"
-                width="800"
-                height="1000"
-                loading="lazy"
-                decoding="async"
-              />
-            </figure>
-            <div class="work-body">
-              <h3>HuFriedy / SurgiMac SEO Pack</h3>
-              <p>Keyword research and competitive gap pack for dental/surgical product SEO — URL inventories, KD/volume shortlists, and mapped opportunities.</p>
-              <ul class="metric-list">
-                <li>Product URL + keyword inventories</li>
-                <li>Top-25 keyword mapping by opportunity</li>
-              </ul>
-              <div class="work-links">
-                <a href="assets/images/on-page-seo-guide.jpeg" target="_blank" rel="noopener noreferrer">On-page SEO guide</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="work-item reveal">
-            <div class="work-meta">
-              <span class="work-label">Build + SEO</span>
-              <span class="work-index">06</span>
-            </div>
-            <figure class="work-media work-media-doc">
-              <img
-                src="assets/images/card-insurance-proposal.webp"
-                alt="Website Development and SEO Proposal cover for insurance brokerage"
-                width="980"
-                height="1268"
-                loading="lazy"
-                decoding="async"
-              />
-            </figure>
-            <div class="work-body">
-              <h3>Insurance Site &amp; SEO Proposal</h3>
-              <p>Scoped a WordPress build with ZIP-based lead routing, agent recruitment pages, Formidable Forms, and a phased SEO growth plan.</p>
-              <ul class="metric-list">
-                <li>5-week build roadmap + SEO months 1–3 plan</li>
-                <li>Lead + agent capture architecture defined</li>
-              </ul>
-              <div class="work-links">
-                <a href="assets/website-seo-proposal.pdf" target="_blank" rel="noopener noreferrer">Proposal PDF</a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
     <section class="section about" id="about">
       <div class="about-layout">
         <figure class="about-portrait reveal">
@@ -652,10 +204,10 @@
           <p class="eyebrow">About</p>
           <h2>Operator first. Automation next.</h2>
           <p>
-            I’m John Lester Ingeniero — Senior SEO Specialist and WordPress Development Manager based in Pampanga, Philippines. I own the full loop from technical SEO to hosting, DNS, and Cloudflare edge delivery.
+            I'm John Lester Ingeniero — Senior SEO Specialist and WordPress Development Manager based in Pampanga, Philippines. I own the full loop from technical SEO to hosting, DNS, and Cloudflare edge delivery.
           </p>
           <p>
-            A large part of my day is already automation-shaped: static conversion playbooks, fleet Workers, bulk WP-CLI/SQL repairs, CallRail scanners, and audit spreadsheets across many domains. I use Cursor and ChatGPT as co-pilots — and I’m building toward true AI automation where scanners decide, repair, verify, and only escalate exceptions.
+            A large part of my day is already automation-shaped: static conversion playbooks, fleet Workers, bulk WP-CLI/SQL repairs, CallRail scanners, and audit spreadsheets across many domains. I use Cursor and ChatGPT as co-pilots — and I'm building toward true AI automation where scanners decide, repair, verify, and only escalate exceptions.
           </p>
           <figure class="about-side-visual">
             <img
@@ -678,9 +230,9 @@
     <section class="section connect" id="connect">
       <div class="connect-panel reveal">
         <p class="eyebrow">Ready to hire</p>
-        <h2>Let’s talk about your SEO, WordPress, or automation seat</h2>
+        <h2>Let's talk about your SEO, WordPress, or automation seat</h2>
         <p>
-          Looking for someone who can own technical SEO, keep multi-site fleets healthy, and ship static conversion when WordPress performance is the bottleneck? Book 30 minutes — I’ll bring relevant case work.
+          Looking for someone who can own technical SEO, keep multi-site fleets healthy, and ship static conversion when WordPress performance is the bottleneck? Book 30 minutes — I'll bring relevant case work.
         </p>
         <ul class="connect-points">
           <li>Remote-ready · async documentation habit</li>
@@ -704,6 +256,6 @@
     <p class="footer-note">© <span id="year"></span> · Open to full-time or contract</p>
   </footer>
 
-  <script src="script.js?v=hire3"></script>
+  <script src="script.js?v=site4"></script>
 </body>
 </html>
