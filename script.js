@@ -94,7 +94,7 @@ document.querySelectorAll(".work-media img, .ops-mix-card img, .work-thumbs img"
   img.addEventListener("click", () => openLightbox(img));
 });
 
-const revealTargets = document.querySelectorAll(".work-item, .system-item, .mega-stats, .mega-featured, .mega-directory, .ops-mix, .systems-visual, .about-portrait, .about-copy, .connect-panel, .case-card");
+const revealTargets = document.querySelectorAll(".work-item, .system-item, .mega-stats, .mega-featured, .mega-directory, .ops-mix, .systems-visual, .about-portrait, .about-copy, .connect-panel, .case-card, .success-did");
 
 if (!prefersReduced && "IntersectionObserver" in window) {
   const observer = new IntersectionObserver(
