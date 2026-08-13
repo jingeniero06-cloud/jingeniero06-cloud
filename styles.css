@@ -638,11 +638,59 @@ img {
   transform: scale(1.03);
 }
 
+.work-media-ui img {
+  object-fit: cover;
+  object-position: top center;
+}
+
 .work-media-doc img {
   object-fit: contain;
   object-position: top center;
   background: #fff;
   aspect-ratio: 4 / 3;
+}
+
+.ops-mix {
+  margin-top: 2rem;
+  padding: 1.5rem 1.25rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.ops-mix h3 {
+  margin: 0 0 0.45rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 2.4vw, 1.55rem);
+  letter-spacing: -0.025em;
+}
+
+.ops-mix > div:first-child p:last-child {
+  margin: 0 0 1.15rem;
+  color: var(--muted);
+}
+
+.ops-mix-grid {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.ops-mix-card {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.ops-mix-card img {
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.ops-mix-chips {
+  margin: 1rem 0 0;
 }
 
 .work-meta {
@@ -975,13 +1023,8 @@ img {
   }
 
   .proof-row {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     padding: 1.35rem 1.5rem;
-  }
-
-  .proof-row li + li {
-    padding-left: 1.25rem;
-    border-left: 1px solid var(--line);
   }
 
   .work-grid {
@@ -1051,6 +1094,19 @@ img {
   .about-layout {
     grid-template-columns: 0.9fr 1.1fr;
     gap: 3rem;
+  }
+
+  .proof-row {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .proof-row li + li {
+    padding-left: 1.1rem;
+    border-left: 1px solid var(--line);
+  }
+
+  .ops-mix-grid {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
