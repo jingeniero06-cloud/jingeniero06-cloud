@@ -142,8 +142,13 @@ if (!prefersReduced) {
   const searchEl = root.querySelector("[data-mega-search]");
   const platformEl = root.querySelector("[data-mega-platform]");
   const batchEl = root.querySelector("[data-mega-batch]");
+  const exportEl = root.querySelector("[data-mega-export]");
+  const sortBtns = root.querySelectorAll("[data-mega-sort]");
 
   let sites = [];
+  let currentList = [];
+  let sortKey = null;
+  let sortDir = 1;
 
   function platformKey(site) {
     const p = `${site.platform} ${site.status}`.toLowerCase();
@@ -194,6 +199,48 @@ if (!prefersReduced) {
     }
   }
 
+  function sortValue(site, key) {
+    switch (key) {
+      case "name":
+        return (site.name || site.domain || "").toLowerCase();
+      case "domain":
+        return (site.domain || "").toLowerCase();
+      case "customer": {
+        const label = customerLabel(site);
+        return label === "—" ? "" : label.toLowerCase();
+      }
+      case "batch":
+        return Number(site.batch) || 0;
+      case "platform":
+        return platformLabel(site).toLowerCase();
+      default:
+        return "";
+    }
+  }
+
+  function sortList(list) {
+    if (!sortKey) return list;
+    return [...list].sort((a, b) => {
+      const va = sortValue(a, sortKey);
+      const vb = sortValue(b, sortKey);
+      if (va < vb) return -1 * sortDir;
+      if (va > vb) return 1 * sortDir;
+      return 0;
+    });
+  }
+
+  function updateSortIndicators() {
+    sortBtns.forEach((btn) => {
+      const th = btn.closest("th");
+      if (!th) return;
+      if (btn.getAttribute("data-mega-sort") === sortKey) {
+        th.setAttribute("aria-sort", sortDir === 1 ? "ascending" : "descending");
+      } else {
+        th.setAttribute("aria-sort", "none");
+      }
+    });
+  }
+
   function applyFilters() {
     const q = (searchEl?.value || "").trim().toLowerCase();
     const platform = platformEl?.value || "all";
@@ -207,7 +254,44 @@ if (!prefersReduced) {
       return hay.includes(q);
     });
 
-    render(filtered);
+    currentList = sortList(filtered);
+    if (exportEl) exportEl.disabled = currentList.length === 0;
+    render(currentList);
+  }
+
+  function csvCell(value) {
+    const s = String(value ?? "");
+    return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
+  }
+
+  function exportCsv() {
+    if (!currentList.length) return;
+    const header = ["Site", "Domain", "Customer", "Batch", "Platform"];
+    const lines = [header.map(csvCell).join(",")];
+    currentList.forEach((site) => {
+      const customer = customerLabel(site);
+      lines.push(
+        [
+          site.name || site.domain || "",
+          site.domain || "",
+          customer === "—" ? "" : customer,
+          site.batch || "",
+          platformLabel(site),
+        ]
+          .map(csvCell)
+          .join(",")
+      );
+    });
+
+    const blob = new Blob([lines.join("\n")], { type: "text/csv;charset=utf-8;" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "mega-inc-fleet.csv";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
   }
 
   fetch("assets/mega-ai-sites.json")
@@ -227,4 +311,20 @@ if (!prefersReduced) {
   searchEl?.addEventListener("input", applyFilters);
   platformEl?.addEventListener("change", applyFilters);
   batchEl?.addEventListener("change", applyFilters);
+
+  sortBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const key = btn.getAttribute("data-mega-sort");
+      if (sortKey === key) {
+        sortDir *= -1;
+      } else {
+        sortKey = key;
+        sortDir = 1;
+      }
+      updateSortIndicators();
+      applyFilters();
+    });
+  });
+
+  exportEl?.addEventListener("click", exportCsv);
 })();
