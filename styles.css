@@ -1365,6 +1365,87 @@ img {
   background: var(--accent-wash);
 }
 
+.mega-export {
+  margin-top: 0.7rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.85rem;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.mega-export::before {
+  content: "↓";
+  font-weight: 700;
+}
+
+.mega-export:hover {
+  border-color: rgba(15, 110, 99, 0.4);
+  color: var(--accent);
+  background: var(--accent-wash);
+}
+
+.mega-export:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.mega-table th.is-sortable {
+  padding: 0;
+}
+
+.mega-sort {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  width: 100%;
+  padding: 0.7rem 0.85rem;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-align: left;
+  transition: color 0.15s ease;
+}
+
+.mega-sort:hover {
+  color: var(--accent);
+}
+
+.mega-sort::after {
+  content: "↕";
+  font-size: 0.9em;
+  opacity: 0.35;
+}
+
+.mega-table th[aria-sort="ascending"] .mega-sort,
+.mega-table th[aria-sort="descending"] .mega-sort {
+  color: var(--accent);
+}
+
+.mega-table th[aria-sort="ascending"] .mega-sort::after {
+  content: "↑";
+  opacity: 1;
+}
+
+.mega-table th[aria-sort="descending"] .mega-sort::after {
+  content: "↓";
+  opacity: 1;
+}
+
 @media (min-width: 720px) {
   .mega-stats {
     grid-template-columns: repeat(5, minmax(0, 1fr));
