@@ -56,7 +56,27 @@ document.querySelectorAll("[data-subnav]").forEach((group) => {
   });
 });
 
+document.querySelectorAll("[data-nested-nav]").forEach((group) => {
+  const btn = group.querySelector("[data-nested-btn]");
+  btn?.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    const open = !group.classList.contains("is-open");
+    closeNestedNavs();
+    group.classList.toggle("is-open", open);
+    btn.setAttribute("aria-expanded", String(open));
+  });
+});
+
+function closeNestedNavs() {
+  document.querySelectorAll("[data-nested-nav]").forEach((group) => {
+    group.classList.remove("is-open");
+    group.querySelector("[data-nested-btn]")?.setAttribute("aria-expanded", "false");
+  });
+}
+
 function closeSubnavs() {
+  closeNestedNavs();
   document.querySelectorAll("[data-subnav]").forEach((group) => {
     group.classList.remove("is-open");
     group.querySelector("[data-subnav-btn]")?.setAttribute("aria-expanded", "false");
