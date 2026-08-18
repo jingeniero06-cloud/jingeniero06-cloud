@@ -11,7 +11,7 @@ Organic growth systems for WordPress businesses — plus hands-on **WordPress �
 **WordPress → Static Conversion** — Live vs static audit with Lighthouse ~80→~96, LCP ~4.4s→~2.6s, schema preserved, CallRail forms via Workers.  
 Case study: [Portfolio site → Projects](https://jingeniero06-cloud.github.io/jingeniero06-cloud/#static-conversion)
 
-Also: 13-site static QA · Swim2000 GMC feed audit · PrintItNY titles/metas · HuFriedy keyword pack · Insurance WP + SEO proposal
+Also: Austin Foundation Repair booking LP ([live](https://book.austinfoundationrepairexperts.com/) · [case](https://jingeniero06-cloud.github.io/jingeniero06-cloud/austin-book.html)) · 13-site static QA · Swim2000 GMC feed audit · PrintItNY titles/metas · HuFriedy keyword pack · Insurance WP + SEO proposal
 
 ---
 
