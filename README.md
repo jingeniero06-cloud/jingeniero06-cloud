@@ -11,7 +11,6 @@ Organic growth systems for WordPress businesses â€” plus hands-on **WordPress â†
 | | |
 |---|---|
 | **Book a call** | [calendly.com/jingeniero-06/30min](https://calendly.com/jingeniero-06/30min) |
-| **Portfolio folder** | [Google Drive]() |
 | **Email** | [jingeniero.06@gmail.com](mailto:jingeniero.06@gmail.com) |
 
 ---
